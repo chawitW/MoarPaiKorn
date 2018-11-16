@@ -31,6 +31,7 @@ namespace WerewolfClient
         private int _currentTime;
         private List<Player> _players = null;
         public List<Player> Players { get => _players; }
+        
 
         public const string TRUE = "True";
         public const string FALSE = "False";
@@ -53,6 +54,7 @@ namespace WerewolfClient
             YouShotDead = 13,
             OtherShotDead = 14,
             Alive = 15,
+            SignOut = 16
         }
         public const string ROLE_SEER = "Seer";
         public const string ROLE_AURA_SEER = "Aura Seer";
@@ -354,6 +356,13 @@ namespace WerewolfClient
             }
             NotifyAll();
         }
+
+        public void SignOut()
+        {
+            _event = EventEnum.SignOut;
+            NotifyAll();
+        }
+        
 
         public void Vote(string target)
         {

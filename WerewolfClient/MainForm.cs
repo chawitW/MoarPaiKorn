@@ -26,9 +26,13 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        private Form _login;
         public MainForm()
         {
+            
             InitializeComponent();
+            
+            
 
             foreach (int i in Enumerable.Range(0, 16))
             {
@@ -267,6 +271,9 @@ namespace WerewolfClient
                             _isDead = false;
                         }
                         break;
+                    case EventEnum.SignOut:
+                        this.Visible = false;
+                        break;
                 }
                 // need to reset event
                 wm.Event = EventEnum.NOP;
@@ -361,5 +368,14 @@ namespace WerewolfClient
         {
             Environment.Exit(0);
         }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = CommandEnum.SignOut;
+            controller.ActionPerformed(wcmd);
+        } 
+
     }
 }

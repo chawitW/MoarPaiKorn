@@ -66,6 +66,10 @@ namespace WerewolfClient
                         case WerewolfCommand.CommandEnum.RequestUpdate:
                             wm.Update();
                             break;
+                        case WerewolfCommand.CommandEnum.LeaveGame:
+                            wm.LeaveGame();
+                            break;
+
                         case WerewolfCommand.CommandEnum.Vote:
                             wm.Vote(cmd.Payloads["Target"]);
                             break;

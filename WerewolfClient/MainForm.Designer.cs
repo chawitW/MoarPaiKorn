@@ -50,6 +50,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.TbChatBox = new System.Windows.Forms.TextBox();
             this.GBAction = new System.Windows.Forms.GroupBox();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnJoin = new System.Windows.Forms.Button();
             this.BtnAction = new System.Windows.Forms.Button();
             this.BtnVote = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             this.LBPeriod = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnLogout = new System.Windows.Forms.Button();
+            this.BtnLeaveGame = new System.Windows.Forms.Button();
             this.GBPlayers.SuspendLayout();
             this.GBChat.SuspendLayout();
             this.GBAction.SuspendLayout();
@@ -352,6 +353,8 @@
             // 
             // GBAction
             // 
+            this.GBAction.Controls.Add(this.BtnLeaveGame);
+            this.GBAction.Controls.Add(this.BtnLogout);
             this.GBAction.Controls.Add(this.BtnJoin);
             this.GBAction.Controls.Add(this.BtnAction);
             this.GBAction.Controls.Add(this.BtnVote);
@@ -363,6 +366,16 @@
             this.GBAction.TabIndex = 3;
             this.GBAction.TabStop = false;
             this.GBAction.Text = "Action";
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.Location = new System.Drawing.Point(0, 69);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(75, 32);
+            this.BtnLogout.TabIndex = 9;
+            this.BtnLogout.Text = "Log out";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // BtnJoin
             // 
@@ -463,22 +476,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Day #";
             // 
-            // BtnLogout
+            // BtnLeaveGame
             // 
-            this.BtnLogout.Location = new System.Drawing.Point(594, 585);
-            this.BtnLogout.Name = "BtnLogout";
-            this.BtnLogout.Size = new System.Drawing.Size(75, 32);
-            this.BtnLogout.TabIndex = 9;
-            this.BtnLogout.Text = "Log out";
-            this.BtnLogout.UseVisualStyleBackColor = true;
-            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            this.BtnLeaveGame.Location = new System.Drawing.Point(240, 43);
+            this.BtnLeaveGame.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnLeaveGame.Name = "BtnLeaveGame";
+            this.BtnLeaveGame.Size = new System.Drawing.Size(100, 57);
+            this.BtnLeaveGame.TabIndex = 10;
+            this.BtnLeaveGame.Text = "Leave Game";
+            this.BtnLeaveGame.UseVisualStyleBackColor = true;
+            this.BtnLeaveGame.Click += new System.EventHandler(this.BtnLeaveGame_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 625);
-            this.Controls.Add(this.BtnLogout);
             this.Controls.Add(this.GBStatus);
             this.Controls.Add(this.GBAction);
             this.Controls.Add(this.GBChat);
@@ -530,6 +543,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnAction;
         private System.Windows.Forms.Button BtnLogout;
+        private System.Windows.Forms.Button BtnLeaveGame;
     }
 }
 

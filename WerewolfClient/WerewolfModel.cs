@@ -54,7 +54,8 @@ namespace WerewolfClient
             YouShotDead = 13,
             OtherShotDead = 14,
             Alive = 15,
-            SignOut = 16
+            SignOut = 16,
+            LeaveGame = 17
         }
         public const string ROLE_SEER = "Seer";
         public const string ROLE_AURA_SEER = "Aura Seer";
@@ -317,6 +318,12 @@ namespace WerewolfClient
             }
             NotifyAll();
         }
+
+        public void LeaveGame()
+        {
+            
+        }
+
         public void SignIn(string server, string login, string password)
         {
             try

@@ -26,7 +26,7 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
-        private Form _login;
+   
         public MainForm()
         {
             
@@ -371,11 +371,16 @@ namespace WerewolfClient
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = CommandEnum.SignOut;
             controller.ActionPerformed(wcmd);
-        } 
+        }
 
+        private void BtnLeaveGame_Click(object sender, EventArgs e)
+        {
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = CommandEnum.LeaveGame;
+            controller.ActionPerformed(wcmd);
+        }
     }
 }
